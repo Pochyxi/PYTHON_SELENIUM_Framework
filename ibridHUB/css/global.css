@@ -1,0 +1,30 @@
+body {
+    background-color: #A9CCE3;
+    color: #18254E;
+}
+
+#dvlpz-nav {
+    background-color: #18254E !important;
+}
+
+#dvlpz-logo {
+    padding: 0;
+    margin-right: 20px;
+}
+
+#click_me {
+    background-color: #BF0A30 !important;
+}
+
+#reload_button {
+    background-color: #18254E !important;
+    color: #A9CCE3 !important;
+}
+
+#home_link, #test_link {
+    margin-right: 15px;
+    padding: 0;
+    background-color: transparent !important;
+    border: none;
+    color: #A9CCE3 !important;
+}

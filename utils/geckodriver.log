@@ -1,0 +1,44 @@
+1679225016005	geckodriver	INFO	Listening on 127.0.0.1:2281
+1679225149862	geckodriver	INFO	Listening on 127.0.0.1:2594
+1679225310774	geckodriver	INFO	Listening on 127.0.0.1:1039
+1679225638787	geckodriver	INFO	Listening on 127.0.0.1:1780
+1679226217765	geckodriver	INFO	Listening on 127.0.0.1:2391
+1679226220830	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "2392" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\A55F4~1.LOP\\AppData\\Local\\Temp\\rust_mozprofilen6ny1e"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1679226221950	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1679226221967	Marionette	INFO	Listening on port 2400
+Read port: 2400
+WebDriver BiDi listening on ws://127.0.0.1:2392
+1679226222356	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\A55F4~1.LOP\\AppData\\Local\\Temp\\rust_mozprofilen6ny1e\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:2392/devtools/browser/b681a5ea-a4fc-4330-86b9-9e1a5d7a289c
+JavaScript error: resource://devtools/client/jsonview/Sniffer.sys.mjs, line 53: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript warning: https://pagead2.googlesyndication.com/bg/PQ7F-3j7IW7HtCEpcT_WSI9tX5puXOVPYtzmzEMsE24.js line 2 > eval line 3721 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/PQ7F-3j7IW7HtCEpcT_WSI9tX5puXOVPYtzmzEMsE24.js line 2 > eval line 243 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit line 1 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit line 1 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit line 1 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit line 1 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit line 1 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit line 1 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://z.moatads.com/quantcastv2691176990399/moatad.js#moatClientLevel1=p-fHFepEQud3Q-h&moatClientLevel2=qfm&moatClientLevel3=dfc4745c-b537-4f02-8823-3fb16fbfb62e&moatClientLevel4=8aa4dfc5-c2c9-43e5-a337-3867d37c02e1&uid=yAZvIcwFHVDScRwkvhkdUM8BBFO5cWs_xncdJcp1bVDGBmpQclRhpQ==, line 240: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit line 1 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit line 1 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit line 1 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit line 1 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1679226607573	Marionette	INFO	Stopped listening on port 2400
+Dynamically enable window occlusion 1
+!!! error running onStopped callback: TypeError: callback is not a function
