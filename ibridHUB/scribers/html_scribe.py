@@ -133,9 +133,8 @@ class HTML_scribe:
         # Aggiorno l'html e provvedo ad aggiornare l'oggetto html
         self.add_css_file("./ibridHUB/css/home.css", 'home', clear=True, exclude=['global'])
         self.add_html_fragment("./ibridHUB/html/home.html", 'container_app', 'view_container',
-                                           clear=True)
+                               clear=True)
 
-        self.home_scripts.add_test_exemple_launch()
         self.nav_scripts.hide_progress_bar()
 
         self.clear_container("braces")
@@ -145,13 +144,20 @@ class HTML_scribe:
         # Inserisco il css appartenente alla pagina test
         self.add_css_file("./ibridHUB/css/test.css", 'test', clear=True, exclude=['global'])
         # Inserisco il l'html appartenente alla pagina test
-        self.add_html_fragment("./ibridHUB/html/test.html", "test_view", 'view_container', clear=True)
+        self.add_html_fragment("./ibridHUB/html/test.html", "container_app", 'view_container', clear=True)
 
         # Nascondo la barra di caricamento
         self.nav_scripts.hide_progress_bar()
 
+        # # # # Qui tutti gli script
+
         # Aggiungo le card dei test
         self.test_scripts.push_tests_cards(json_obj, 'test_view')
+
+        # Lo script dell'action choice (modale aggiungi test case)
+        self.test_scripts.handle_action_choice()
+
+        # # # # FINE_____________________
 
         # Elimino l'oggetto html di nome braces
         self.clear_container("braces")

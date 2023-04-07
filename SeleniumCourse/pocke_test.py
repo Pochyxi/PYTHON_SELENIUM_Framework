@@ -2,9 +2,9 @@ from utils.Utils4 import Giver
 from utils.Utils4.Utils4 import Utils4
 from utils.Utils4.player.Pocke import Pocke
 from utils.Utils4.player.Player import Player
-from utils.Utils4.player.PocketMold.ClickMold import ClickMold
-from utils.Utils4.player.PocketMold.FindElementsMold import FindElementsMold
-from utils.Utils4.player.PocketMold.GetPageMold import GetPageMold
+from utils.Utils4.player.pocketMold.ClickMold import ClickMold
+from utils.Utils4.player.pocketMold.FindElementsMold import FindElementsMold
+from utils.Utils4.player.pocketMold.GetPageMold import GetPageMold
 
 get_page_pocke = Pocke(GetPageMold(Giver.get_practice1_elements("practice_page_1"))).get_pocke()
 

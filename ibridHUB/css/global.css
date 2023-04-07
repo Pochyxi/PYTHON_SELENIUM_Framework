@@ -3,24 +3,29 @@ body {
     color: #18254E;
 }
 
+/*NAVBAR*/
 #dvlpz-nav {
     background-color: #18254E !important;
 }
 
+/*LOGO*/
 #dvlpz-logo {
     padding: 0;
     margin-right: 20px;
 }
 
-#click_me {
+/*BOTTONE ROSSO*/
+.dvlpz_red_button {
     background-color: #BF0A30 !important;
 }
 
-#reload_button {
+/*BOTTONE BLUE*/
+.dvlpz_blue_button {
     background-color: #18254E !important;
     color: #A9CCE3 !important;
 }
 
+/*I LINK DELLE ROTTE*/
 #home_link, #test_link {
     margin-right: 15px;
     padding: 0;

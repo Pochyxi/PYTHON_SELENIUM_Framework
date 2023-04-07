@@ -1,14 +1,8 @@
 from ibridHUB.scribers.html_scribe import HTML_scribe
 from ibridHUB.scribers.json_scribe import JSON_scribe
-from utils.Utils4 import Giver
 from utils.Utils4.Utils4 import Utils4
-from utils.Utils4.player.Pocke import Pocke
 from utils.Utils4.player.Player import Player
-from utils.Utils4.player.PocketMold.ClickMold import ClickMold
-from utils.Utils4.player.PocketMold.FindElementsMold import FindElementsMold
-from utils.Utils4.player.PocketMold.GetPageMold import GetPageMold
-from utils.Utils4.player.PocketMold.SelectDropdownMold import SelectDropdownMold
-from utils.Utils4.player.PocketMold.standard.WriteMold import WriteMold
+from utils.Utils4.player.PockeCompiler import PockeCompiler
 
 
 class AppHandler:
@@ -32,6 +26,9 @@ class AppHandler:
         config["router"] = "home"
         config["home_flag"] = True
         config["flag"] = True
+        config["test_running"] = False
+        config["test_running_flag"] = False
+        config["test_coordinate"] = ""
         self.JSON_scribe.set_json_obj("config", config)
 
         print("OGGETTO JSON INIZIALIZZATO")
@@ -55,7 +52,7 @@ class AppHandler:
             # ROUTER
             self.router(json_obj, html_obj_braces)
 
-            # Momentaneo solo a scopo di test
+            # LACIO DEI TEST CASES
             self.arbitrum(json_obj, html_obj_braces, self.utils)
 
             # CONTROLLO CHIUSURA
@@ -114,7 +111,9 @@ class AppHandler:
             json_obj['config']['test_running'] = True
             self.JSON_scribe.set_json_obj("config", json_obj['config'])
             try:
-                self.example_test(utils)
+                # # # # LOGICA DI TEST RUNNING
+                self.compile_and_run_test(json_obj, html_obj)
+                # # # # FINE ______
                 result = True
             except Exception as e:
                 print(e)
@@ -127,6 +126,17 @@ class AppHandler:
             json_obj['config']['test_running'] = False
             self.JSON_scribe.set_json_obj("config", json_obj['config'])
             self.reset_page_after_test(json_obj, result)
+
+    def compile_and_run_test(self, json_obj, html_obj):
+        coordinate_list = html_obj["test_coordinate"].split(" || ")
+
+        cliente = coordinate_list[0]
+        application = coordinate_list[1]
+        test_case = coordinate_list[2]
+
+        script = json_obj["test_suite"]['clienti'][cliente]['applications'][application]['test_cases'][test_case]
+
+        Player(self.utils, PockeCompiler(script).compile_pockes()).throw_pockes()
 
     def reset_page_after_test(self, json_obj, result):
         self.reset_app(json_obj)
@@ -143,20 +153,3 @@ class AppHandler:
         self.utils.get_page("data:,")
         self.HTML_scribe.add_html_global(self.standard_obj())
         self.router_redirect(json_obj)
-
-    @staticmethod
-    def example_test(utils):
-        get_page_pocke = Pocke(GetPageMold(Giver.get_practice1_elements("practice_page_1"))).get_pocke()
-
-        click_pocke = Pocke(ClickMold(Giver.get_practice1_elements("input_writing"))).get_pocke()
-
-        find_elements_pocke = Pocke(FindElementsMold("strong")).get_pocke()
-
-        write_pocke = Pocke(
-            WriteMold(Giver.get_practice1_elements("input_writing"), "Questo è un esempio di scrittura")).get_pocke()
-
-        select_pocke = Pocke(SelectDropdownMold(Giver.get_practice1_elements("country_select"), index=3)).get_pocke()
-
-        player = Player(utils, [get_page_pocke, click_pocke, find_elements_pocke, write_pocke, select_pocke])
-
-        player.throw_pockes()

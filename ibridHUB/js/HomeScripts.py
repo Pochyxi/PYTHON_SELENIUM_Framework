@@ -68,19 +68,4 @@ class HomeScripts:
             });
         """)
 
-    def add_test_exemple_launch(self):
-        self.driver.execute_script(f"""
-            let button = document.getElementById('example_test');
-            button.addEventListener('click', function() {{
-                const flag_traductor = (flag_value) => {{
-                        if (flag_value == "True") {{
-                            return "False";
-                        }};
-                        return "True";
-                    }};
-                    document.getElementById('run_test_flag').innerHTML = flag_traductor(document.getElementById('run_test_flag').innerHTML)
-                    button.innerHTML = "ESEGUO TEST..."
-            }});
-        """)
-
 

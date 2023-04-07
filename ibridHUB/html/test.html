@@ -1,5 +1,57 @@
 <body>
-<div id="container-app" class="text-center">
+<div id="container_app" class="text-center">
+    <div>
+        <h3>TESTS CASES</h3>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Aggiungi nuovo test case
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Aggiungi nuovo test case</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="nome_cliente" class="form-label">Nome cliente</label>
+                            <input type="text" class="form-control" id="nome_cliente"
+                                   placeholder="inserisci nome cliente">
+                        </div>
+                        <div class="mb-3">
+                            <label for="nome_applicazione" class="form-label">Nome applicazione</label>
+                            <input type="text" class="form-control" id="nome_applicazione"
+                                   placeholder="inserisci nome applicazione">
+                        </div>
+                        <div class="mb-3">
+                            <label for="nome_test" class="form-label">Nome test</label>
+                            <input type="text" class="form-control" id="nome_test"
+                                   placeholder="inserisci nome test">
+                        </div>
+                        <div id="select_container">
+                            <h4>Seleziona un'azione da eseguire</h4>
+                            <select id="action_select" class="form-select" aria-label="Default select example">
+                                <option value="get_page" selected>Get page</option>
+                                <option value="click">Click</option>
+                                <option value="find_element">Find element</option>
+                                <option value="find_elements">Find elements</option>
+                                <option value="write">Write</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                        <button type="button" class="btn btn-primary">Salva test</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="test_view" class="d-flex justify-content-evenly">
     </div>
 </div>

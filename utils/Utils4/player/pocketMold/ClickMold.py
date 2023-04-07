@@ -1,4 +1,4 @@
-from utils.Utils4.player.PocketMold.StandarMold import StandardMold
+from utils.Utils4.player.pocketMold.standard.StandarMold import StandardMold
 
 
 class ClickMold(StandardMold):

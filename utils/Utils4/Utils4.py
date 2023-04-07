@@ -32,6 +32,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
 # WebDriverWait
 from selenium.webdriver.support.wait import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 
 class Utils4:
@@ -51,19 +54,19 @@ class Utils4:
         if browser == 'chrome':
             chrome_options = webdriver.ChromeOptions()
             chrome_options.add_argument('--incognito')
-            self.service_obj = ChromeService("/Users/a.lopez/Documents/chromedriver")
+            self.service_obj = ChromeService(executable_path=ChromeDriverManager().install())
             self.driver = webdriver.Chrome(service=self.service_obj, options=chrome_options)
             self.driver.maximize_window()
         elif browser == 'firefox':
             firefox_options = webdriver.FirefoxOptions()
             firefox_options.add_argument('--private')
-            self.service_obj = FirefoxService("/Users/a.lopez/Documents/geckodriver")
+            self.service_obj = FirefoxService(executable_path=GeckoDriverManager().install())
             self.driver = webdriver.Firefox(service=self.service_obj, options=firefox_options)
             self.driver.maximize_window()
         elif browser == 'edge':
             edge_options = webdriver.EdgeOptions()
             edge_options.add_argument('--inprivate')
-            self.service_obj = EdgeService("/Users/a.lopez/Documents/msedgedriver")
+            self.service_obj = EdgeService(executable_path=EdgeChromiumDriverManager().install())
             self.driver = webdriver.Edge(service=self.service_obj, options=edge_options)
             self.driver.maximize_window()
 

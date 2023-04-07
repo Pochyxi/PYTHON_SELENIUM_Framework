@@ -1,20 +1,17 @@
-from utils.Utils4.Utils4 import Utils4
-from utils.Utils4.player.Player import Player
 from utils.Utils4.player.Pocke import Pocke
-from utils.Utils4.player.PocketMold.ClickMold import ClickMold
-from utils.Utils4.player.PocketMold.CustomWaitMold import CustomWaitMold
-from utils.Utils4.player.PocketMold.FindElementMold import FindElementMold
-from utils.Utils4.player.PocketMold.FindElementsMold import FindElementsMold
-from utils.Utils4.player.PocketMold.GetPageMold import GetPageMold
-from utils.Utils4.player.PocketMold.SelectDropdownMold import SelectDropdownMold
-from utils.Utils4.player.PocketMold.standard.WriteMold import WriteMold
+from utils.Utils4.player.pocketMold.ClickMold import ClickMold
+from utils.Utils4.player.pocketMold.CustomWaitMold import CustomWaitMold
+from utils.Utils4.player.pocketMold.FindElementMold import FindElementMold
+from utils.Utils4.player.pocketMold.FindElementsMold import FindElementsMold
+from utils.Utils4.player.pocketMold.GetPageMold import GetPageMold
+from utils.Utils4.player.pocketMold.SelectDropdownMold import SelectDropdownMold
+from utils.Utils4.player.pocketMold.WriteMold import WriteMold
 
 
 class PockeCompiler:
 
     def __init__(self, string_list):
         self.string_list = string_list
-
 
     def compile_pockes(self):
         pocke_list = []
@@ -50,27 +47,26 @@ class PockeCompiler:
             elif info_object['comando'] == 'write':
                 pocke_list.append(Pocke(WriteMold(*info_object['params'])).get_pocke())
 
-
         return pocke_list
 
 
-
-string_list = [
-    "get_page || https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm",
-    "click || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=text]",
-    "custom_wait || 5",
-    "find_element || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > select",
-    "custom_wait || 2",
-    "find_elements || p",
-    "find_elements || strong || css || None || Years of Experience",
-    "select_dropdown || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > select || Antartica || css || None || None",
-    "write || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=text] || budkaYo",
-    "custom_wait || 5",
-]
-
-pocke_compiler = PockeCompiler(string_list)
-
-print(pocke_compiler.compile_pockes())
-
-player = Player(Utils4('edge'), pocke_compiler.compile_pockes())
-player.throw_pockes()
+#
+# string_list = [
+#     "get_page || https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm",
+#     "click || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=text]",
+#     "custom_wait || 5",
+#     "find_element || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > select",
+#     "custom_wait || 2",
+#     "find_elements || p",
+#     "find_elements || strong || css || None || Years of Experience",
+#     "select_dropdown || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > select || Antartica || css || None || None",
+#     "write || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=text] || budkaYo",
+#     "custom_wait || 5",
+# ]
+#
+# pocke_compiler = PockeCompiler(string_list)
+#
+# print(pocke_compiler.compile_pockes())
+#
+# player = Player(Utils4('edge'), pocke_compiler.compile_pockes())
+# player.throw_pockes()
