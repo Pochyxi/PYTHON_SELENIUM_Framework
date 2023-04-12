@@ -48,3 +48,33 @@ class GlobalScripts:
                     title.innerHTML = 'TESTING HUB';
                     document.head.appendChild(title);
                 """)
+
+    def toast(self, message, bg_text="success"):
+        text_header = "Messaggio di errore" if bg_text == "danger" else "Messaggio di successo"
+
+        script = f"""
+            let toast_container = document.createElement('div');
+            toast_container.setAttribute('id', 'toast_container');
+            
+            toast_container.innerHTML = `
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                  <div id="liveToast" class="toast text-bg-{bg_text}" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                      <strong class="me-auto">{text_header}</strong>
+                      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                      {message}
+                    </div>
+                  </div>
+                </div>
+            `;
+            
+            document.body.appendChild(toast_container);
+            
+            const my_toast = document.getElementById('liveToast')
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(my_toast);
+            toastBootstrap.show();
+        """
+
+        self.driver.execute_script(script)

@@ -1,0 +1,91 @@
+{
+    "test_suite": {
+        "clienti": {
+            "cliente_1": {
+                "applications": {
+                    "testing_app": {
+                        "test_cases": {
+                            "Test failed": [
+                                "get_page || https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm",
+                                "click || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=text]",
+                                "custom_wait || 5",
+                                "find_element || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > select",
+                                "custom_wait || 2",
+                                "find_elements || p",
+                                "find_elements || strong || css || None || Years of Experience",
+                                "select_dropdown || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > select || Antartica || css || None || None",
+                                "write || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=text] || Hello World! || css || True",
+                                "custom_wait || 5"
+                            ],
+                            "BOOTSTRAP": [
+                                "get_page || https://getbootstrap.com/",
+                                "click || #bdNavbar > div.offcanvas-body.p-4.pt-0.p-lg-0 > ul.navbar-nav.flex-row.flex-wrap.bd-navbar-nav > li:nth-child(1) > a",
+                                "click || #docsearch > button",
+                                "write || #docsearch-input || forms || css || True"
+                            ],
+                            "SUBITO": [
+                                "get_page || https://www.subito.it/",
+                                "click || #main-keyword-field",
+                                "write || #main-keyword-field || lancia y || css || True",
+                                "find_elements || img || css || None || None"
+                            ],
+                            "AMAZON": [
+                                "get_page || https://www.amazon.it/",
+                                "click || #sp-cc-accept",
+                                "click || #twotabsearchtextbox",
+                                "write || #twotabsearchtextbox || Pistola laser star wars || css || True"
+                            ],
+                            "AMAZON_2": [
+                                "get_page || https://www.amazon.it/",
+                                "click || #sp-cc-accept",
+                                "click || #twotabsearchtextbox",
+                                "write || #twotabsearchtextbox || Pistola laser star wars || css || True",
+                                "click || #nav-cart"
+                            ]
+                        }
+                    }
+                }
+            },
+            "cliente_2": {
+                "applications": {
+                    "testing_app2": {
+                        "test_cases": {
+                            "Test passed": [
+                                "get_page || https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm",
+                                "click || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=text]",
+                                "custom_wait || 5",
+                                "find_element || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > select",
+                                "custom_wait || 2",
+                                "find_elements || p",
+                                "find_elements || strong || css || None || Years of Experience",
+                                "select_dropdown || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > select || Antartica || css || None || None",
+                                "write || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=text] || Hello World! || css || None",
+                                "custom_wait || 5"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Cliente_ordinario": {
+                "applications": {
+                    "testing_SUITE": {
+                        "test_cases": {
+                            "Test VXYZ": [
+                                "get_page || https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm",
+                                "click || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=text]",
+                                "custom_wait || 5",
+                                "find_element || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > select",
+                                "custom_wait || 2",
+                                "find_elements || p",
+                                "find_elements || strong || css || None || Years of Experience",
+                                "select_dropdown || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > select || Antartica || css || None || None",
+                                "write || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=text] || Ciao a tutti questo \u00c3\u00a8 in TEEEEEST || css || None",
+                                "custom_wait || 5"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

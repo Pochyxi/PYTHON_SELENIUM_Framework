@@ -2,56 +2,15 @@
     "config": {
         "flag": true,
         "reload": false,
-        "router": "home",
+        "router": "test",
         "test_flag": false,
         "home_flag": false,
         "test_running": false,
         "run_test_flag": false,
         "test_coordinate": "",
-        "test_running_flag": false
-    },
-    "test_suite": {
-        "clienti": {
-            "cliente_1": {
-                "applications": {
-                    "testing_app": {
-                        "test_cases": {
-                            "Test failed": [
-                                "get_page || https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm",
-                                "click || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=text]",
-                                "custom_wait || 5",
-                                "find_element || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > select",
-                                "custom_wait || 2",
-                                "find_elements || p",
-                                "find_elements || strong || css || None || Years of Experience",
-                                "select_dropdown || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > select || Antartica || css || None || None",
-                                "write || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=text] || Hello World! || css || True",
-                                "custom_wait || 5"
-                            ]
-                        }
-                    }
-                }
-            },
-            "cliente_2": {
-                "applications": {
-                    "testing_app2": {
-                        "test_cases": {
-                            "Test passed": [
-                                "get_page || https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm",
-                                "click || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=text]",
-                                "custom_wait || 5",
-                                "find_element || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > select",
-                                "custom_wait || 2",
-                                "find_elements || p",
-                                "find_elements || strong || css || None || Years of Experience",
-                                "select_dropdown || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > select || Antartica || css || None || None",
-                                "write || #mainContent > div:nth-child(6) > div > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=text] || Hello World! || css || None",
-                                "custom_wait || 5"
-                            ]
-                        }
-                    }
-                }
-            }
-        }
+        "test_running_flag": false,
+        "save_test_case_flag": false,
+        "test_case_list": [],
+        "test_case_coordinates": ""
     }
 }

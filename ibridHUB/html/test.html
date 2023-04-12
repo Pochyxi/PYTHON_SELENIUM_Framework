@@ -3,7 +3,7 @@
     <div>
         <h3>TESTS CASES</h3>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-success dvlpz_blue_button m-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Aggiungi nuovo test case
         </button>
 
@@ -31,6 +31,7 @@
                             <input type="text" class="form-control" id="nome_test"
                                    placeholder="inserisci nome test">
                         </div>
+                        <div id="action_container"></div>
                         <div id="select_container">
                             <h4>Seleziona un'azione da eseguire</h4>
                             <select id="action_select" class="form-select" aria-label="Default select example">
@@ -45,14 +46,14 @@
 
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
-                        <button type="button" class="btn btn-primary">Salva test</button>
+                        <button type="button" class="btn btn-secondary dvlpz_red_button" data-bs-dismiss="modal">Annulla</button>
+                        <button id="save_test_case_button" type="button" class="btn btn-primary dvlpz_blue_button">Salva test</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="test_view" class="d-flex justify-content-evenly">
+    <div id="test_view" class="d-flex justify-content-center flex-wrap">
     </div>
 </div>
 </body>

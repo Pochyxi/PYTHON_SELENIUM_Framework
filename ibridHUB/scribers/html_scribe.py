@@ -140,7 +140,7 @@ class HTML_scribe:
         self.clear_container("braces")
         self.set_html_obj(json_obj, "config", "braces")
 
-    def set_test_page_and_update_html_obj(self, json_obj):
+    def set_test_page_and_update_html_obj(self, json_obj, test_suite_obj):
         # Inserisco il css appartenente alla pagina test
         self.add_css_file("./ibridHUB/css/test.css", 'test', clear=True, exclude=['global'])
         # Inserisco il l'html appartenente alla pagina test
@@ -152,15 +152,18 @@ class HTML_scribe:
         # # # # Qui tutti gli script
 
         # Aggiungo le card dei test
-        self.test_scripts.push_tests_cards(json_obj, 'test_view')
+        self.test_scripts.push_tests_cards(test_suite_obj, 'test_view')
 
         # Lo script dell'action choice (modale aggiungi test case)
         self.test_scripts.handle_action_choice()
+
+        self.test_scripts.add_test_case_button()
 
         # # # # FINE_____________________
 
         # Elimino l'oggetto html di nome braces
         self.clear_container("braces")
+
         # Aggiorno l'html obj in base al json obj
         self.set_html_obj(json_obj, "config", "braces")
 
